@@ -9,7 +9,7 @@ use Tests\TestCase;
 
 class CustomerBookingTest extends TestCase
 {
-    use RefreshDatabase;
+    // use RefreshDatabase;
 
     protected function authenticate()
     {

@@ -9,7 +9,7 @@ use Tests\TestCase;
 
 class AdminServiceTest extends TestCase
 {
-    use RefreshDatabase;
+    // use RefreshDatabase;
 
     protected function authenticateAdmin()
     {
