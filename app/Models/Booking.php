@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Booking extends Model
 {
+    use HasFactory;
     protected $fillable = ['user_id', 'service_id', 'booking_date', 'status'];
 
     protected $casts = [
@@ -18,7 +19,7 @@ class Booking extends Model
         return $this->belongsTo(User::class);
     }
 
-    
+
     public function service()
     {
         return $this->belongsTo(Service::class);

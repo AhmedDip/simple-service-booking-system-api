@@ -7,9 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Service extends Model
 {
+     use HasFactory;
     protected $fillable = ['name', 'description', 'price', 'status'];
 
     protected $casts = [
         'price' => 'decimal:2',
     ];
+
+    public function bookings()
+    {
+        return $this->hasMany(Booking::class);
+    }
 }
